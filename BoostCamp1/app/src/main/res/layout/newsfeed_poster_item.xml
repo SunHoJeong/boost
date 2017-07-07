@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF"
+    android:layout_marginTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <LinearLayout
+            android:id="@+id/linear_postby"
+            android:layout_width="80dp"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/imageBtn_postby"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_marginTop="12dp"
+                android:padding="16dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/linear_postby"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_postby"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="left"
+                android:paddingTop="24dp"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_date"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textColor="#b0bcd5"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView_postComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:textColor="#000"/>
+
+        <ImageView
+            android:id="@+id/imageView_postImg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:id="@+id/imageBtn_sym"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_like_on"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"/>
+
+        <TextView
+            android:id="@+id/textView_symCnt"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/imageBtn_sym"
+            android:paddingTop="12dp"
+            android:textColor="#b0bcd5"/>
+
+        <TextView
+            android:id="@+id/textView_commentCnt"
+            android:layout_width="72dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/textView_shareCnt"
+            android:paddingTop="8dp"
+            android:textColor="#b0bcd5"/>
+
+        <TextView
+            android:id="@+id/textView_shareCnt"
+            android:layout_width="72dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingTop="8dp"
+            android:textColor="#b0bcd5"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dfe3ee" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:src="@drawable/ic_like"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:src="@drawable/ic_comment"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:src="@drawable/ic_share"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#f7f7f7">
+
+        <ImageButton
+            android:id="@+id/imageBtn_profile"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:padding="1dp"
+            android:src="@drawable/img_suno"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/imageBtn_profile"
+            android:orientation="vertical"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="4dp">
+
+            <TextView
+                android:id="@+id/textView_myName"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingTop="5dp"
+                android:textColor="#000"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textView_myComment"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textColor="#000"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
