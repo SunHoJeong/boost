@@ -122,6 +122,7 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/imageBtn_like"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -134,6 +135,7 @@
             android:scaleType="centerInside"/>
 
         <ImageButton
+            android:id="@+id/imageBtn_comment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -141,11 +143,12 @@
             android:paddingRight="24dp"
             android:paddingTop="3dp"
             android:paddingBottom="3dp"
-            android:src="@drawable/ic_comment"
+            android:src="@drawable/ic_commnet"
             android:background="@android:color/transparent"
             android:scaleType="centerInside"/>
 
         <ImageButton
+            android:id="@+id/imageBtn_share"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

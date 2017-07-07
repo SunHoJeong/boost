@@ -3,25 +3,14 @@ package com.example.suno.boostcamp1;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.suno.boostcamp1.data.NewsPost;
 import com.example.suno.boostcamp1.data.Newsfeed;
-import com.example.suno.boostcamp1.data.NewsfeedItem;
 import com.example.suno.boostcamp1.holder.ItemViewHolder;
 import com.example.suno.boostcamp1.holder.NewPostViewHolder;
 import com.example.suno.boostcamp1.holder.StoryViewHolder;
 
 import java.util.ArrayList;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /**
  * Created by suno on 2017. 7. 4..

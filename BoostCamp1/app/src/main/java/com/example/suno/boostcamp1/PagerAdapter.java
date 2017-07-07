@@ -25,17 +25,13 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
 
         switch(position){
             case 0:
-                NewsfeedFragment newsfeedFragment = new NewsfeedFragment();
-                return newsfeedFragment;
+                return new NewsfeedFragment();
             case 1:
-                FriendsFragment friendsFragment = new FriendsFragment();
-                return friendsFragment;
+                return new FriendsFragment();
             case 2:
-                NewIssueFragment newIssueFragment = new NewIssueFragment();
-                return newIssueFragment;
+                return new NewIssueFragment();
             case 3:
-                EtcListFragment etcListFragment = new EtcListFragment();
-                return etcListFragment;
+                return new EtcListFragment();
 
             default:
                 return null;
