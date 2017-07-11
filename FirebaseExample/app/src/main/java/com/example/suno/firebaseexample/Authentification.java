@@ -88,7 +88,7 @@ public class Authentification extends AppCompatActivity {
     public void onBtnClicked(View v){
         switch(v.getId()){
             case R.id.button_auth_join:
-                setUserInfo();
+                joinUserInfo();
                 break;
             case R.id.button_auth:
                 authUser();
@@ -96,7 +96,7 @@ public class Authentification extends AppCompatActivity {
         }
     }
 
-    public void setUserInfo(){
+    public void joinUserInfo(){
         mAuth = FirebaseAuth.getInstance();
 
         mAuth.createUserWithEmailAndPassword(editTextAuthEmail.getText().toString(), editTextAuthPW.getText().toString())
@@ -106,12 +106,12 @@ public class Authentification extends AppCompatActivity {
 
                         if (!task.isSuccessful()) {
                             Log.w("failure", task.getException());
-                            Toast.makeText(Authentification.this, "회원가입 실패",
+                            Toast.makeText(Authentification.this, "create user email ",
                                     Toast.LENGTH_SHORT).show();
                         } else {
                             editTextAuthEmail.setText("");
                             editTextAuthPW.setText("");
-                            Toast.makeText(Authentification.this, "가입완료 로그인하세요!",
+                            Toast.makeText(Authentification.this, "success auth!",
                                     Toast.LENGTH_SHORT).show();
 
                         }
@@ -135,23 +135,6 @@ public class Authentification extends AppCompatActivity {
                             Toast.makeText(Authentification.this, "fail to auth user",
                                     Toast.LENGTH_SHORT).show();
                         }
-                        else{
-                            /*
-                            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                            if (user != null) {
-                                // Name, email address, and profile photo Url
-                                String name = user.getDisplayName();
-                                String email = user.getEmail();
-                                Uri photoUrl = user.getPhotoUrl();
-
-                                // The user's ID, unique to the Firebase project. Do NOT use this value to
-                                // authenticate with your backend server, if you have one. Use
-                                // FirebaseUser.getToken() instead.
-                                String uid = user.getUid();
-                            }*/
-                        }
-
-                        // ...
                     }
                 });
     }

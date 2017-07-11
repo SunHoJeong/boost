@@ -28,10 +28,6 @@ public class MainActivity extends AppCompatActivity {
     Button btnDB;
     @BindView(R.id.btn_firebase_authentification)
     Button btnAuth;
-    @BindView(R.id.btn_firebase_fcm)
-    Button btnFCM;
-    @BindView(R.id.btn_firebase_error)
-    Button btnError;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +42,7 @@ public class MainActivity extends AppCompatActivity {
         FirebaseCrash.report(new Exception("My first Android non-fatal error"));
     }
 
-    @OnClick({R.id.btn_firebase_database, R.id.btn_firebase_authentification,
-        R.id.btn_firebase_fcm, R.id.btn_firebase_error})
+    @OnClick({R.id.btn_firebase_database, R.id.btn_firebase_authentification})
     public void Onclick(View v){
         Intent intent;
         switch (v.getId()){
@@ -58,10 +53,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_firebase_authentification:
                 intent = new Intent(this, Authentification.class);
                 startActivity(intent);
-                break;
-            case R.id.btn_firebase_fcm:
-                break;
-            case R.id.btn_firebase_error:
                 break;
         }
     }
