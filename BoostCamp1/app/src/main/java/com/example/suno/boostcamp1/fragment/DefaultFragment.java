@@ -13,10 +13,10 @@ import com.example.suno.boostcamp1.R;
  * Created by suno on 2017. 7. 4..
  */
 
-public class NewIssueFragment extends Fragment {
+public class DefaultFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_newissue_tab, container, false);
+        return inflater.inflate(R.layout.fragment_default_tab, container, false);
     }
 }

@@ -13,10 +13,9 @@ import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
-
-
     @BindView(R.id.tabLayout)
     TabLayout tabLayout;
     @BindView(R.id.viewPager)
@@ -32,8 +31,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
+        setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
         init();
     }
 
@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void init(){
-        ButterKnife.bind(this);
 
         //tabLayout = (TabLayout)findViewById(R.id.tabLayout);
         tabLayout.addTab(tabLayout.newTab().setIcon(tabIcons[0]));
@@ -91,15 +90,19 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
     /*
      * Toolbar imageBtn Clicked
      */
-    public void messangerBtnClicked(View v){
-        Toast.makeText(this,"messagenger clicked!",Toast.LENGTH_SHORT).show();
-    }
-
-    public void directBtnClicked(View v){
-        Toast.makeText(this,"direct clicked!",Toast.LENGTH_SHORT).show();
+    //message, directBtn
+    @OnClick({R.id.imageBtn_airplane, R.id.imageBtn_message})
+    public void onClicked(View v){
+        switch (v.getId()){
+            case R.id.imageBtn_airplane:
+                Toast.makeText(this,"messagenger clicked!",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.imageBtn_message:
+                Toast.makeText(this,"direct clicked!",Toast.LENGTH_SHORT).show();
+                break;
+        }
     }
 }

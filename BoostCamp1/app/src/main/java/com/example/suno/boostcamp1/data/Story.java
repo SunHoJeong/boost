@@ -5,20 +5,21 @@ package com.example.suno.boostcamp1.data;
  */
 
 public class Story extends Newsfeed{
-    private int myImgId, storyImgId;
+    private String storyName;
+    private int storyImgId;
 
-    public Story(int viewType, int myImgId, int storyImgId) {
+    public Story(int viewType, String storyName, int storyImgId) {
         super(viewType);
-        this.myImgId = myImgId;
+        this.storyName = storyName;
         this.storyImgId = storyImgId;
     }
 
-    public int getMyImgId() {
-        return myImgId;
+    public String getStoryName() {
+        return storyName;
     }
 
-    public void setMyImgId(int myImgId) {
-        this.myImgId = myImgId;
+    public void setStoryName(String storyName) {
+        this.storyName = storyName;
     }
 
     public int getStoryImgId() {

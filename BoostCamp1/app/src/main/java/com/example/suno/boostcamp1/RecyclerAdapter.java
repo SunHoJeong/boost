@@ -33,7 +33,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         switch (viewType){
             case TYPE_STORY:
-                return new StoryViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.newsfeed_poster_story, parent, false));
+                return new StoryViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.newsfeed_poster_story, parent, false), context);
             case TYPE_NEWPOST:
                 return new NewPostViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.newsfeed_poster_newpost, parent, false), context);
             case TYPE_NEWITEM:

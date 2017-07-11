@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "984474540886",
+    "firebase_url": "https://boost1-7f22f.firebaseio.com",
+    "project_id": "boost1-7f22f",
+    "storage_bucket": "boost1-7f22f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984474540886:android:dbce09f4ea3d6b25",
+        "android_client_info": {
+          "package_name": "com.example.suno.boostcamp1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "984474540886-7cgqomh74aufv95b1rghs6r14lbd57a6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWfQxg1tYFaeD3mJJbSFT2oqq0pEKO8ak"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

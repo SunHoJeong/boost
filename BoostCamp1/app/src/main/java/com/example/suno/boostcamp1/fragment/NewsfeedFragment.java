@@ -15,10 +15,12 @@ import com.example.suno.boostcamp1.data.Newsfeed;
 import com.example.suno.boostcamp1.data.NewsfeedItem;
 import com.example.suno.boostcamp1.R;
 import com.example.suno.boostcamp1.RecyclerAdapter;
+import com.example.suno.boostcamp1.data.Story;
 
 import java.util.ArrayList;
 
 import static com.example.suno.boostcamp1.RecyclerAdapter.TYPE_NEWPOST;
+import static com.example.suno.boostcamp1.RecyclerAdapter.TYPE_STORY;
 
 /**
  * Created by suno on 2017. 7. 4..
@@ -29,9 +31,6 @@ public class NewsfeedFragment extends Fragment {
     private RecyclerView.Adapter mAdapter;
     private LinearLayoutManager mLayoutManager;
     private ArrayList<Newsfeed> mDataset;
-
-    public NewsfeedFragment(){
-    }
 
     @Nullable
     @Override
@@ -48,7 +47,8 @@ public class NewsfeedFragment extends Fragment {
 
         mDataset = new ArrayList<>();
 
-        addItem(); //add fixed data
+        //TODO 더미 아이템을 Fragment의 onCreateView에서 생성을 한 이유?
+        //addItem();
 
         mAdapter = new RecyclerAdapter(mDataset, getActivity());
         mRecyclerView.setAdapter(mAdapter);
@@ -56,13 +56,20 @@ public class NewsfeedFragment extends Fragment {
         return view;
     }
 
+    /*
+        Called immediately after onCreateView(LayoutInflater, ViewGroup, Bundle) has returned,
+        but before any saved state has been restored in to the view.
+     */
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        addItem(); //add fixed data
     }
 
     public void addItem(){
+        mDataset.add(new Story(TYPE_STORY, "내 스토리", R.drawable.img_suno));
+
         mDataset.add(new NewsPost(TYPE_NEWPOST, R.drawable.img_suno));
 
         NewsfeedItem.Builder builder = new NewsfeedItem.Builder();
@@ -99,7 +106,7 @@ public class NewsfeedFragment extends Fragment {
         mDataset.add(builder
                 .withViewType(RecyclerAdapter.TYPE_NEWITEM)
                 .withPostByImgId(R.drawable.ic_lego)
-                .withPostBy("정수노")
+                .withPostBy("LEGO")
                 .withDate("23분")
                 .withPostComment("오늘 내 동료들을 영입했다! "+
                         "나는 더이상 혼자가 아니다. 나의 세력을 좀 더 키워서 이 세상을 지배하겠다 하하하!\n\n"+"#너 내 동료가 돼라!\n"+"#LEGO")

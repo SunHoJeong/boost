@@ -1,19 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="56dp"
-    android:background="#FFF">
+    android:layout_height="64dp"
+    android:background="#FFF"
+    android:orientation="horizontal">
 
-    <ImageButton
-        android:id="@+id/imageBtn_camera"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="8dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/layout_story"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <ImageButton
-        android:id="@+id/imageBtn_storyProfile"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="8dp"
-        android:layout_toRightOf="@id/imageBtn_camera"/>
-</RelativeLayout>
+            <ImageView
+                android:id="@+id/imageView_story_camera"
+                android:layout_width="48dp"
+                android:layout_height="0dp"
+                android:layout_weight="8"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="6dp"
+                android:padding="12dp"
+                android:background="@drawable/border"
+                android:tint="#3b5998"
+                android:src="@drawable/ic_camera"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="10dp"
+                android:text="카메라"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_horizontal"
+            android:layout_width="1dp"
+            android:layout_height="48dp"
+            android:background="#dfe3ee"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/layout_story"
+            android:layout_marginLeft="10dp" />
+
+        <LinearLayout
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/view_horizontal">
+
+            <ImageView
+                android:id="@+id/imageView_story"
+                android:layout_width="48dp"
+                android:layout_height="0dp"
+                android:layout_weight="8"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="6dp"
+                android:padding="1dp"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:id="@+id/textView_story"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="10dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

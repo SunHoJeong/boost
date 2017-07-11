@@ -23,8 +23,7 @@
             android:src="@drawable/ic_airplane"
             android:layout_gravity="center"
             android:background="@android:color/transparent"
-            android:scaleType="centerInside"
-            android:onClick="directBtnClicked"/>
+            android:scaleType="centerInside" />
 
         <EditText
             android:id="@+id/editText_search"
@@ -33,7 +32,8 @@
             android:layout_weight="8"
             android:drawableLeft="@drawable/ic_search"
             android:scaleType="centerInside"
-            android:hint=" 검색" />
+            android:hint=" 검색"
+            android:imeOptions="flagNoExtractUi"/>
 
         <ImageButton
             android:id="@+id/imageBtn_message"
@@ -44,7 +44,6 @@
             android:layout_gravity="right"
             android:src="@drawable/ic_messenger"
             android:background="@android:color/transparent"
-            android:scaleType="centerInside"
-            android:onClick="messangerBtnClicked"/>
+            android:scaleType="centerInside" />
     </LinearLayout>
 </android.support.v7.widget.Toolbar>

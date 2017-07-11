@@ -4,9 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import com.example.suno.boostcamp1.fragment.NewsfeedFragment;
-import com.example.suno.boostcamp1.fragment.FriendsFragment;
-import com.example.suno.boostcamp1.fragment.NewIssueFragment;
-import com.example.suno.boostcamp1.fragment.EtcListFragment;
+import com.example.suno.boostcamp1.fragment.DefaultFragment;
 
 /**
  * Created by suno on 2017. 7. 4..
@@ -22,19 +20,12 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-
         switch(position){
             case 0:
                 return new NewsfeedFragment();
-            case 1:
-                return new FriendsFragment();
-            case 2:
-                return new NewIssueFragment();
-            case 3:
-                return new EtcListFragment();
-
+            //TODO PagerAdapter에서 default가 null을 전달 할 경우, NullPointException으로 인한 잠재적 이슈
             default:
-                return null;
+                return new DefaultFragment();
         }
     }
 
